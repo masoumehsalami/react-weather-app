@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Weather  from './Weather'
 
 
 export default  function App() {
@@ -10,13 +10,13 @@ export default  function App() {
           helloooooo weather
       </h1>
       <div className='container'>
-
+       <Weather/>
       <footer>
       This Project was coded by Masoumeh Salami and 
       <br/>
       is located in 
       <a href='https://github.com/masoumehsalami/react-weather-app'>
-       Git Add
+       Git Source
       </a>
       </footer>
       </div>
