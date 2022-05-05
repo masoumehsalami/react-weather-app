@@ -9,11 +9,12 @@ export default function Weather(){
            <div className="row">
                <div className="col-9">
                    <input type="search"
-                   placeholder="Enter a City"
-                   className="form-control"/>
+                   placeholder="Enter a City..."
+                   className="form-control"
+                   autoFocus="on"/>
                </div>
                <div className="col-3">
-                   <input type="submit" value="search" className="btn btn-primary"/>
+                   <input type="submit" value="search" className="btn btn-primary w-100"/>
                </div>
            </div>
         </form>
@@ -25,10 +26,15 @@ export default function Weather(){
                 Weather IS like Raining
             </li>
         </ul>
-        <div className="row">
+        <div className="row mt-3">
             <div className="col-6">
-                <img src="http://openweathermap.org/img/wn/" alt="MostlyClouldy"/> 
-                     6 ° 
+                <div className="clearfix">
+                <img src="http://openweathermap.org/img/wn/" alt="MostlyClouldy" className="float-left"/> 
+                  <div className="float-left">
+                    <span className="temprature">6</span>  
+                    <span className="unit"> °c</span>
+                </div>
+                </div>
             </div>
             <div  className="col-6">
                 <ul>
