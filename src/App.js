@@ -10,7 +10,7 @@ export default  function App() {
           helloooooo weather
       </h1>
       <div className='container'>
-       <Weather/>
+       <Weather defaultCity="Tehran"/>
       <footer>
       This Project was coded by Masoumeh Salami and 
       <br/>
