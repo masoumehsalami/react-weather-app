@@ -10,7 +10,11 @@ export default  function App() {
           helloooooo weather
       </h1>
       <footer>
-      This Project was coded by Masoumeh Salami
+      This Project was coded by Masoumeh Salami and 
+      is located in 
+      <a href='https://github.com/masoumehsalami/react-weather-app'>
+       Git Add
+      </a>
       </footer>
     </div>
   );
