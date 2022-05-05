@@ -1,14 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+
+export default  function App() {
   return (
     <div className="App">
       <h1> 
           helloooooo weather
       </h1>
+      <footer>
+      This Project was coded by Masoumeh Salami
+      </footer>
     </div>
   );
 }
 
-export default App;
+
