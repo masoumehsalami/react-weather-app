@@ -1,6 +1,6 @@
 import React from "react";
 import LocalTime from "./LocalTime";
-
+import WeatherIcon from "./WeatherIcon";
 export default function CityWeatherInfo(props){
 return(
   <div className="weatherInfo"> 
@@ -19,8 +19,12 @@ return(
       <div className="row mt-3">
         <div className="col-6">
           <div className="clearfix">
-         
-            <img src={props.data.iconUrl} alt={props.data.description} className="float-left"/> 
+            <div className="float-left">
+            <WeatherIcon code={props.data.icon} 
+            //alt={props.data.description}
+            />
+           
+            </div>
               <div className="float-left">
                  <span className="temprature">{Math.round(props.data.temp)}</span>  
                 <span className="unit">°c</span>
