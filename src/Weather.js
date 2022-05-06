@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./Weather.css";
 import axios from "axios";
+import LocalTime from "./LocalTime";
 export default function Weather(props){
   
     const [weatherTemp,setWeatherTemp]   = useState({ready:false})
@@ -13,13 +14,14 @@ export default function Weather(props){
             wind:response.data.main.speed,
             description:response.data.weather[0].description,
             humidity:response.data.main.humidity,
+            date:new Date(response.data.dt *1000),
             cityname:response.data.name,
         });
        
     }
     if (weatherTemp.ready){
 
-    
+
     return(
     <div className="Weather">
         Amazing Weather search Engine
@@ -41,8 +43,9 @@ export default function Weather(props){
  </h1>
         <ul>
             <li>
-                Local time : Friday 20:08
+                Local time:<LocalTime date= {weatherTemp.date}/>
             </li>
+            <br/>
             <li className="text-capitalize">
                {weatherTemp.description}
             </li>
