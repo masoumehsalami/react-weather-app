@@ -11,10 +11,11 @@ export default function Weather(props){
         setWeatherTemp({
             ready:true,
             temp:response.data.main.temp,
-            wind:response.data.main.speed,
+            wind:response.data.wind.speed,
             description:response.data.weather[0].description,
             humidity:response.data.main.humidity,
             date:new Date(response.data.dt *1000),
+            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             cityname:response.data.name,
         });
        

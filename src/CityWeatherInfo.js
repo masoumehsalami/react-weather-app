@@ -7,7 +7,6 @@ return(
    <h1>
      {props.data.cityname}
    </h1>
-
     <ul>
     <li>
         Local time:<LocalTime date= {props.data.date}/>
@@ -20,7 +19,8 @@ return(
       <div className="row mt-3">
         <div className="col-6">
           <div className="clearfix">
-            <img src="http://openweathermap.org/img/wn/" alt="MostlyClouldy" className="float-left"/> 
+         
+            <img src={props.data.iconUrl} alt={props.data.description} className="float-left"/> 
               <div className="float-left">
                  <span className="temprature">{Math.round(props.data.temp)}</span>  
                 <span className="unit">°c</span>
