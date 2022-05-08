@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import "./Weather.css";
 import axios from "axios";
 import CityWeatherInfo from "./CityWeatherInfo";
+
 export default function Weather(props){
     const[city,setCity]=useState(props.defaultCity)  
     const [weatherTemp,setWeatherTemp]   = useState({ready:false})
@@ -32,8 +33,7 @@ export default function Weather(props){
     }
     if (weatherTemp.ready){
     return(
-    <div className="Weather">
-        Amazing Weather search Engine
+    <div className="Weather">      
         <form onSubmit={handler}>
            <div className="row">
                <div className="col-9">
@@ -44,7 +44,7 @@ export default function Weather(props){
                    onChange={handlerCity}/>
                </div>
                <div className="col-3">
-                   <input type="submit" value="search" className="btn btn-primary w-100"/>
+                   <input type="submit" value="search" className="btn btn-primary w-100 h-200"/>
                </div>
            </div>
         </form>
